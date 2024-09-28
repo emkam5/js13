@@ -1,0 +1,62 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Светлый фон */
+}
+
+.slider-container {
+    position: relative;
+    max-width: 600px; /* Ширина слайдера */
+    margin: 50px auto; /* Центрирование слайдера */
+    overflow: hidden; /* Скрытие лишних элементов */
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+.slider {
+    display: flex; /* Flexbox для горизонтальной раскладки */
+    transition: transform 0.5s ease; /* Плавный переход для движения слайдов */
+}
+
+.slide {
+    min-width: 100%; /* Каждому слайду устанавливаем ширину в 100% */
+    height: 400px; /* Высота слайдов */
+}
+
+.slide1 {
+    background-color: #3498db; /* Цвет первого слайда */
+}
+
+.slide2 {
+    background-color: #e74c3c; /* Цвет второго слайда */
+}
+
+.slide3 {
+    background-color: #f39c12; /* Цвет третьего слайда */
+}
+
+button {
+    position: absolute;
+    top: 50%; /* Центрирование по вертикали */
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон */
+    border: none;
+    border-radius: 50%; /* Кнопки круглые */
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10; /* Чтобы кнопки были поверх слайдов */
+    transition: background-color 0.3s; /* Плавный переход */
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Непрозрачный фон при наведении */
+}
+
+.prev {
+    left: 10px; /* Кнопка "Назад" */
+}
+
+.next {
+    right: 10px; /* Кнопка "Вперед" */
+}
